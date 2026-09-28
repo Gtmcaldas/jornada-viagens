@@ -24,16 +24,15 @@ input[type="checkbox"]:checked ~ nav {
   left: 0;
   width: 100%;
   background-color: var(--background-tertiary-color);
+  position: absolute;
 }
 
 nav {
   display: none;
-  position: absolute;
 }
 
 .list-links {
   list-style: none;
-  font-weight: var(--menu-weight);
 }
 
 .list-links li {
@@ -42,5 +41,30 @@ nav {
 
 .list-links a {
   color: var(--text-secondary-color);
+  font-weight: var(--menu-weight);
   text-decoration: none;
+  font-size: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation-menu {
+    margin-top: 0;
+    width: 467px;
+  }
+  .navigation-menu label {
+    display: none;
+  }
+  .navigation-menu nav {
+    display: block;
+  }
+  .list-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  .navigation-menu li {
+    margin: 0;
+  }
 }
